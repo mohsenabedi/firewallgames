@@ -1,48 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FirewallGames</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #ffffff;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-        }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(90deg, #e94560, #ff6b6b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        p {
-            font-size: 1.25rem;
-            color: #a0a0a0;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hyperblast - A multiplayer arena shooter where warriors fight with modern weapons in epic battles.">
+  <title>Hyperblast: Rise of Anubis </title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Header -->
+  <header>
     <div class="container">
-        <h1>FirewallGames</h1>
-        <p>Welcome to FirewallGames.dev - Your destination for gaming excellence.</p>
+      <div class="logo">
+        <img src="images/NoobGames.png" alt="NoobGames Logo" class="logo-img">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#game-modes">Game Modes</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#supported-platforms">Platforms</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+  <h1>Hyperblast</h1>
+      <p>Where Egyptian gods clash with Viking warriors in epic multiplayer battles.</p>
+      <a href="#" class="btn primary">Coming Soon...</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>About the Game</h2>
+  <p>Hyperblast is an intense multiplayer arena shooter where ancient civilizations collide. Choose your faction - command the mystical powers of Egyptian gods or unleash the brutal might of Viking warriors in fast-paced combat arenas.</p>
+    <p>Battle with friends online in various game modes, collect powerful weapons and temporary abilities through strategic powerup pickups. Login seamlessly with your existing gaming accounts through Epic Games integration.</p>
+  </section>  
+  <!-- About Developer -->
+  <section id="about" class="container">
+    <h2>About the Developer</h2>
+    <p><a href="https://dev.epicgames.com/community/profile/organization/z86R/firewall-development">Firewall Development</a> is currently a solo independent game developer focused on creating unique and engaging gaming experiences. I am passionate about blending rich narratives with innovative gameplay mechanics, multiplayer games, and FPS and TPS shooters.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <h2>Features</h2>
+      <p class="section-subtitle">Immerse yourself in our unique gameplay elements</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">⚔️</div>
+          <h3>Epic Multiplayer Combat</h3>
+          <p>Battle with friends in intense arena matches featuring Egyptian and Viking warriors.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🏺</div>
+          <h3>Powerup Pickups</h3>
+          <p>Collect temporary abilities like divine shields, berserker rage, and mystical weapons.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🏹</div>
+          <h3>Diverse Arsenal</h3>
+          <p>Wield ancient weapons, magical staffs, and legendary Viking axes in combat.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">👥</div>
+          <h3>Easy Login</h3>
+          <p>Connect instantly with Epic Games integration using your existing gaming accounts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🏛️</div>
+          <h3>Ancient Arenas</h3>
+          <p>Fight in historically-inspired battlegrounds from pyramids to Norse settlements.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🎯</div>
+          <h3>Strategic Gameplay</h3>
+          <p>Master weapon spawns, ammo management, and powerup timing to dominate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="container">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/Temple.png" alt="Egyptian Temple Arena">
+        <p>Egyptian Temple Arena</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Viking Vilage.png" alt="Viking Longhouse Battle">
+        <p>Viking Longhouse Battle</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/VikingVilageShowdown.png" alt="Pyramid Showdown">
+        <p>Viking Village Showdown</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Lobby.png" alt="Game Lobby">
+        <p>Game Lobby</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Powerups.png" alt="Powerup Collection">
+        <p>Powerup Collection</p>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Capturetheflag.png" alt="Capture the Flag Mode">
+        <p>Capture the Flag Mode</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Modes Section -->
+  <section id="game-modes" class="container">
+    <h2>Game Modes</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">🔫</div>
+        <h3>Free for All</h3>
+        <p>Every warrior for themselves in a no-holds-barred deathmatch.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">👥</div>
+        <h3>Team Deathmatch</h3>
+        <p>Join forces with your faction to eliminate the enemy team.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🚩</div>
+        <h3>Capture the Flag</h3>
+        <p>Steal the opposing team's flag and return it to your base.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Platforms Section -->
+  <section id="supported-platforms">
+    <div class="container">
+      <h2>Supported Platforms</h2>
+      <div class="our-logo-container">
+        <img src="images/NoobGames.png" alt="NoobGames Logo" class="our-logo">
+      </div>
+      <div class="supporters-logos">
+        <div class="platform-logo-placeholder">Epic Games</div>
+        <div class="platform-logo-placeholder">Steam</div>
+        <div class="platform-logo-placeholder">itch.io</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo-container">
+        <img src="images/NoobGames.png" alt="NoobGames Logo" class="footer-logo">
+        <p>&copy; 2025 NoobGames.dev (by <a href="https://dev.epicgames.com/community/profile/organization/z86R/firewall-development">Firewall Development</a>). All rights reserved.</p>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Twitter">T</a>
+        <a href="#" aria-label="YouTube">Y</a>
+        <a href="#" aria-label="Discord">D</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img src="" alt="Expanded screenshot">
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
