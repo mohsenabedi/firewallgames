@@ -521,55 +521,18 @@ main a:hover {
 }
 
 .policy-content h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-main);
   margin-bottom: 2rem;
   color: var(--secondary);
+  font-weight: 700;
 }
 
 .policy-content h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-main);
   margin-top: 2rem;
   margin-bottom: 1rem;
   color: var(--accent);
-}
-
-.policy-content p, .policy-content ul, .policy-content li {
-  margin-bottom: 1rem;
-  line-height: 1.7;
-}
-
-.policy-content ul {
-  padding-left: 2rem;
-}
-
-.policy-content a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.policy-content a:hover {
-  text-decoration: underline;
-  display: flex;
-}
-
-/* Privacy Policy Page */
-.policy-content {
-  padding-top: 100px;  /* Add padding to prevent content from being hidden behind fixed header */
-  min-height: 80vh;
-  padding-bottom: 3rem;
-}
-
-.policy-content h1 {
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 2rem;
-  color: var(--secondary);
-}
-
-.policy-content h2 {
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: var(--accent);
+  font-weight: 600;
 }
 
 .policy-content p, .policy-content ul, .policy-content li {
