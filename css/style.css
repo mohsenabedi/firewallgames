@@ -645,12 +645,12 @@ a {
 .zombie-features {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .zombie-feature-item {
   background: rgba(30, 30, 30, 0.8);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   border-left: 4px solid #8b0000;
   transition: all 0.4s ease;
@@ -678,7 +678,7 @@ a {
 }
 
 .zombie-feature-item h3 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: #dc143c;
@@ -688,6 +688,7 @@ a {
   color: #ccc;
   line-height: 1.6;
   font-weight: 300;
+  font-size: 0.95rem;
 }
 
 .zombie-gallery {
