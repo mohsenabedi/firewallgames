@@ -3,303 +3,203 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DeadWave - An Unreal Engine 5 multiplayer shooter featuring Team Deathmatch, Capture the Flag, Prop Hunt, and cooperative Zombie Survival modes.">
-  <title>DeadWave</title>
+  <meta name="description" content="Firewall Games – indie studio crafting synthwave-inspired, story-forward experiences.">
+  <title>Firewall Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="images/Firewall-Games - white.png" alt="Firewall Games Logo" class="logo-img">
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#zombie-mode">Zombie Mode</a></li>
-          <li><a href="#game-modes">Game Modes</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#supported-platforms">Platforms</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        </ul>
+  <!--
+    INSTRUCTIONS FOR EDITING CONTENT
+    1. Studio name + tagline: update the text inside the hero <h1> and <p class="tagline">.
+    2. Studio bio + pillars: edit the paragraph and list within the #about section marked with [EDIT THIS BIO] placeholders.
+    3. Featured project: change the copy inside the Deadwave card under #featured. The link to Deadwave.html lives on the <a> button near the bottom.
+    4. Other projects: duplicate or remove .project-card blocks inside the #projects grid (see HTML comments there for a quick template reminder).
+    5. News posts + contact links: swap the placeholder entries in #news and #contact with your actual updates and URLs.
+  -->
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="logo" data-scroll>Firewall Games</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#hero" data-scroll>Home</a>
+        <a href="#about" data-scroll>Studio</a>
+        <a href="#featured" data-scroll>Featured</a>
+        <a href="#projects" data-scroll>Projects</a>
+        <a href="#news" data-scroll>News</a>
+        <a href="#contact" data-scroll>Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-  <h1>DeadWave</h1>
-      <p>An Unreal Engine 5 multiplayer shooter with intense PvP battles and cooperative zombie survival.</p>
-      <a href="#" class="btn primary">Coming Soon...</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="container">
-    <h2>About the Game</h2>
-  <p>DeadWave is an intense Unreal Engine 5 multiplayer shooter featuring diverse game modes for every playstyle. Battle against friends in competitive PvP modes like Team Deathmatch and Capture the Flag, test your stealth in the asymmetric Prop Hunt mode, or team up with friends to survive relentless waves of zombies in the cooperative Zombie Survival mode.</p>
-    <p>Built with Epic Online Services for seamless cross-platform multiplayer, DeadWave delivers fast-paced action, strategic gameplay, and endless replayability across multiple game modes.</p>
-  </section>  
-  <!-- About Developer -->
-  <section id="about" class="container">
-    <h2>About the Developer</h2>
-    <p><a href="https://dev.epicgames.com/community/profile/organization/z86R/firewall-development">Firewall Development</a> is currently a solo independent game developer focused on creating unique and engaging gaming experiences. I am passionate about blending rich narratives with innovative gameplay mechanics, multiplayer games, and FPS and TPS shooters.</p>
-  </section>
-
-  <!-- Features Section -->
-  <section id="features">
-    <div class="container">
-      <h2>Features</h2>
-      <p class="section-subtitle">Experience the ultimate multiplayer shooter experience</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="icon">🎮</div>
-          <h3>Multiple Game Modes</h3>
-          <p>Choose from Team Deathmatch, Capture the Flag, Prop Hunt, and cooperative Zombie Survival.</p>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-orb orb-one"></div>
+        <div class="hero-orb orb-two"></div>
+        <div class="hero-noise"></div>
+      </div>
+      <div class="container hero-inner">
+        <p class="microcopy">Signal: indie studio broadcast</p>
+        <h1 class="glitch-title" data-glitch="Firewall Games">Firewall Games</h1>
+        <p class="tagline">Indie game studio crafting strange worlds and signal-broken stories.</p>
+        <div class="cta-group">
+          <a href="#projects" class="btn primary" data-scroll>Explore Projects</a>
+          <a href="#contact" class="btn ghost" data-scroll>Contact</a>
         </div>
-        <div class="feature-card">
-          <div class="icon">🧟</div>
-          <h3>Zombie Survival</h3>
-          <p>Team up to survive 20 progressive rounds of increasingly difficult zombie waves with boss fights.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">🔫</div>
-          <h3>Diverse Arsenal</h3>
-          <p>Wield a variety of weapons with realistic animations and cinematic camera shake feedback.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">🌐</div>
-          <h3>Cross-Platform Play</h3>
-          <p>Powered by Epic Online Services for seamless cross-platform multiplayer gaming.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">⚙️</div>
-          <h3>Built on Unreal Engine 5</h3>
-          <p>Experience cutting-edge graphics and smooth performance with the latest game technology.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon">👥</div>
-          <h3>Competitive & Cooperative</h3>
-          <p>Test your skills in PvP modes or work together in PvE survival challenges.</p>
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>Scroll to enter</span>
+          <svg viewBox="0 0 24 24" role="presentation" focusable="false">
+            <path d="M12 5v14m0 0l-5-5m5 5l5-5"/>
+          </svg>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Zombie Survival Spotlight Section -->
-  <section id="zombie-mode" class="zombie-spotlight">
-    <div class="zombie-bg-overlay"></div>
-    <div class="container">
-      <div class="zombie-header">
-        <span class="zombie-label">Featured Mode</span>
-        <h2>Zombie Survival</h2>
-        <p class="zombie-tagline">Fight together. Survive the night. Conquer the horde.</p>
-      </div>
-
-      <div class="zombie-content">
-        <div class="zombie-features">
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">🌊</div>
-            <h3>20 Progressive Rounds</h3>
-            <p>Face increasingly difficult waves of the undead. Each round brings more zombies, tougher enemies, and greater challenges.</p>
-          </div>
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">💀</div>
-            <h3>Multiple Zombie Types</h3>
-            <p>Battle against Easy, Hard, and Very Hard zombies. Special boss rounds feature terrifying elite enemies with unique abilities.</p>
-          </div>
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">❤️</div>
-            <h3>Limited Lives System</h3>
-            <p>Each player has 3 lives. Coordinate with your team, revive fallen allies, and survive together or fall alone.</p>
-          </div>
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">🧪</div>
-            <h3>Infection & Cure System</h3>
-            <p>Some zombies can infect you with a deadly virus! Find vaccine pickups or purchase cures from cabinets to stop the damage over time.</p>
-          </div>
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">💣</div>
-            <h3>Powerful Pickups</h3>
-            <p>Discover game-changing items like the Nuke that eliminates all zombies instantly. Strategic pickup usage can turn the tide of battle!</p>
-          </div>
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">⭐</div>
-            <h3>XP & Progression</h3>
-            <p>Earn experience points for every zombie eliminated. Level up through 10 ranks and track your persistent progress across sessions.</p>
-          </div>
-          <div class="zombie-feature-item" data-animate>
-            <div class="zombie-icon">🎆</div>
-            <h3>Victory Celebration</h3>
-            <p>Survive all 20 rounds to trigger an epic victory celebration with fireworks, special effects, and triumph!</p>
+    <section id="about" class="section about">
+      <div class="container about-grid">
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow">Studio bio</p>
+          <h2>Firewall Games, file under experimental signal craft.</h2>
+          <p>[EDIT THIS BIO] Firewall Games is a micro-studio weaving synthwave atmospheres, surreal horror, and improvisational mechanics into playable transmissions.</p>
+          <ul>
+            <li>Atmospheric storytelling that hums with neon static.</li>
+            <li>Experimental mechanics tuned for tension and improvisation.</li>
+            <li>Signal-bent art direction rooted in synthwave + cyberpunk.</li>
+          </ul>
+        </div>
+        <div class="about-visual" data-reveal>
+          <div class="frame">
+            <span class="pulse-dot"></span>
+            <span class="pulse-dot"></span>
+            <div class="waveform" aria-hidden="true"></div>
+            <p>Firewall Protocol v1.3</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="zombie-gallery">
-          <div class="zombie-screenshot main-screenshot" data-animate>
-            <img src="images/HighresScreenshot00012.png" alt="Zombie Survival Action">
-            <div class="screenshot-label">Intense Cooperative Action</div>
-          </div>
-          <div class="zombie-screenshots-grid">
-            <div class="zombie-screenshot" data-animate>
-              <img src="images/zombie-mode-placeholder-2.jpg" alt="Boss Fight" class="placeholder-img">
-              <div class="screenshot-label">Epic Boss Encounters</div>
-            </div>
-            <div class="zombie-screenshot" data-animate>
-              <img src="images/zombie-mode-placeholder-3.jpg" alt="Team Survival" class="placeholder-img">
-              <div class="screenshot-label">Team Coordination</div>
-            </div>
-            <div class="zombie-screenshot" data-animate>
-              <img src="images/zombie-mode-placeholder-4.jpg" alt="Victory" class="placeholder-img">
-              <div class="screenshot-label">Victory Celebration</div>
+    <section id="featured" class="section featured">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Current signal</p>
+          <h2>Featured Project</h2>
+        </div>
+        <article class="project-card featured-card" data-reveal>
+          <div>
+            <p class="microcopy">Deadwave // flagship</p>
+            <h3>Deadwave</h3>
+            <p class="project-summary">Deadwave is Firewall Games' flagship synth-horror shooter, where corrupted radio ghosts flood neon ruins and every broadcast attracts a new horde.</p>
+            <p class="project-genre">Synth-horror shooter // PvP &amp; co-op survival</p>
+            <div class="project-tags">
+              <span>Multiplayer</span>
+              <span>Zombie survival</span>
+              <span>Unreal Engine 5</span>
             </div>
           </div>
+          <a class="btn secondary" href="Deadwave.html">View Deadwave</a>
+        </article>
+      </div>
+    </section>
 
-          <div class="zombie-maps-carousel" data-animate>
-            <h4 class="carousel-title">Diverse Battle Arenas</h4>
-            <div class="carousel-container">
-              <button class="carousel-btn prev" aria-label="Previous map">‹</button>
-              <div class="carousel-track-container">
-                <div class="carousel-track">
-                  <div class="carousel-slide active">
-                    <img src="images/HighresScreenshot00008.png" alt="Compact Arena Map">
-                    <div class="carousel-caption">Tight Corridors & Intense Close Combat</div>
-                  </div>
-                  <div class="carousel-slide">
-                    <img src="images/HighresScreenshot00009.png" alt="Medium Arena Map">
-                    <div class="carousel-caption">Tactical Spaces & Strategic Positioning</div>
-                  </div>
-                  <div class="carousel-slide">
-                    <img src="images/HighresScreenshot00010.png" alt="Large Arena Map">
-                    <div class="carousel-caption">Expansive Battlegrounds & Epic Showdowns</div>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-btn next" aria-label="Next map">›</button>
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Other signals</p>
+          <h2>Projects Archive</h2>
+        </div>
+        <!-- PROJECT CARD TEMPLATE: duplicate a .project-card element, update title/description/link, and replace the href="#" placeholder with the real URL. -->
+        <div class="projects-grid">
+          <article class="project-card" data-reveal>
+            <h3>Secret Project</h3>
+            <p>Simulation Game, Coming Next</p>
+            <div class="project-tags">
+              <span>Redacted</span>
+              <span>Redacted</span>
             </div>
-            <div class="carousel-indicators">
-              <span class="indicator active" data-slide="0"></span>
-              <span class="indicator" data-slide="1"></span>
-              <span class="indicator" data-slide="2"></span>
+          </article>
+          <article class="project-card" data-reveal>
+            <h3>Toon Tanks</h3>
+            <p>Cartoon Tanks Project</p>
+            <div class="project-tags">
+              <span>Prototype</span>
             </div>
-          </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="zombie-stats">
-        <div class="stat-item" data-animate>
-          <div class="stat-number" data-count="20">0</div>
-          <div class="stat-label">Rounds</div>
+    <section id="news" class="section news">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Signals from the firewall</p>
+          <h2>News & Devlog Teasers</h2>
         </div>
-        <div class="stat-item" data-animate>
-          <div class="stat-number" data-count="4">0</div>
-          <div class="stat-label">Zombie Types</div>
+        <div class="news-list">
+          <article class="news-item" data-reveal>
+            <p class="news-date">[01.11.2025]</p>
+            <h3>Getting Read to Publish Early Access</h3>
+            <p>We are getting ready to publish the Deadwave early access release.</p>
+          </article>
+          <article class="news-item" data-reveal>
+            <p class="news-date">[01.03.2025]</p>
+            <h3>Deadwave enters full production</h3>
+            <p>Deadwave has moved into full production, with the team focused on refining gameplay and expanding content.</p>
+          </article>
+          <article class="news-item" data-reveal>
+            <p class="news-date">[01.03.2023]</p>
+            <h3>Hello, World</h3>
+            <p>Firewall Games was founded.</p>
+          </article>
         </div>
-        <div class="stat-item" data-animate>
-          <div class="stat-number" data-count="3">0</div>
-          <div class="stat-label">Lives per Player</div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container contact-grid">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Contact</p>
+          <h2>Connect with Firewall Games</h2>
+          <p>Quick links for press, collaborators, and curious wanderers.</p>
         </div>
-        <div class="stat-item" data-animate>
-          <div class="stat-number" data-count="120">0</div>
-          <div class="stat-label">Seconds per Round</div>
-        </div>
+        <ul class="contact-list" data-reveal>
+          <li>
+            <span>Itch.io</span>
+            <a href="https://firewallgames.itch.io/">Add itch.io link</a>
+          </li>
+          <li>
+            <span>Twitter / X</span>
+            <a href="https://x.com/FirewaIIGames">FirewaII Games X</a>
+          </li>
+          <li>
+            <span>Epic Games Developer Page</span>
+            <a href="https://dev.epicgames.com/community/profile/organization/z86R/firewall-games">Firewall Games</a>
+          </li>
+          <li>
+            <span>Email</span>
+            <svg width="200" height="24" viewBox="0 0 200 24" aria-label="Email contact">
+                <image href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='24'%3E%3Ctext x='0' y='18' font-family='monospace' font-size='13' fill='%23fff' opacity='0.7'%3Esupport @ firewallgames.dev%3C/text%3E%3C/svg%3E" width="200" height="24"/>
+            </svg>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Gallery Section -->
-  <section id="gallery" class="container">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="images/Temple.png" alt="Egyptian Temple Arena">
-        <p>Egyptian Temple Arena</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/Viking Vilage.png" alt="Viking Longhouse Battle">
-        <p>Viking Longhouse Battle</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/VikingVilageShowdown.png" alt="Pyramid Showdown">
-        <p>Viking Village Showdown</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/Lobby.png" alt="Game Lobby">
-        <p>Game Lobby</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/Powerups.png" alt="Powerup Collection">
-        <p>Powerup Collection</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/Capturetheflag.png" alt="Capture the Flag Mode">
-        <p>Capture the Flag Mode</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Game Modes Section -->
-  <section id="game-modes" class="container">
-    <h2>Other Game Modes</h2>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="icon">👥</div>
-        <h3>Team Deathmatch</h3>
-        <p>Classic team-based competitive mode where two teams battle for dominance.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🚩</div>
-        <h3>Capture the Flag</h3>
-        <p>Team-based objective mode focused on capturing the enemy's flag and returning it to your base.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">🎭</div>
-        <h3>Prop Hunt</h3>
-        <p>Asymmetric hide-and-seek gameplay where props disguise themselves and hunters seek them out.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Supported Platforms Section -->
-  <section id="supported-platforms">
-    <div class="container">
-      <h2>Supported Platforms</h2>
-      <div class="our-logo-container">
-        <img src="images/Firewall-Games - white.png" alt="Firewall Games Logo" class="our-logo">
-      </div>
-      <div class="supporters-logos">
-        <div class="platform-logo-placeholder">Epic Games</div>
-        <div class="platform-logo-placeholder">Steam</div>
-        <div class="platform-logo-placeholder">itch.io</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-logo-container">
-        <img src="images/Firewall-Games - white.png" alt="Firewall Games Logo" class="footer-logo">
-        <p>&copy; 2025 FirewallGames.dev (by <a href="https://dev.epicgames.com/community/profile/organization/z86R/firewall-development">Firewall Development</a>). All rights reserved.</p>
-      </div>
-      <div class="social-icons">
-        <a href="#" aria-label="Twitter">T</a>
-        <a href="#" aria-label="YouTube">Y</a>
-        <a href="#" aria-label="Discord">D</a>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="current-year"></span> Firewall Games. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox">
-    <span class="close">&times;</span>
-    <img src="" alt="Expanded screenshot">
-  </div>
-
-  <script src="js/main.js"></script>
+  <script src="js/script.js" defer></script>
 </body>
 </html>
