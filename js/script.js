@@ -110,39 +110,53 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Newsletter form (Formspree) AJAX handling
-  const newsletterForm = document.querySelector('.newsletter-form');
-  if (newsletterForm) {
-    const statusEl = newsletterForm.querySelector('.form-status');
+  const newsletterForms = document.querySelectorAll('.newsletter-form');
+  if (newsletterForms.length) {
+    newsletterForms.forEach((form) => {
+      const statusEl = form.querySelector('.form-status');
 
-    const setStatus = (message, type) => {
-      if (!statusEl) return;
-      statusEl.textContent = message;
-      statusEl.classList.remove('success', 'error');
-      if (type) {
-        statusEl.classList.add(type);
-      }
-    };
-
-    newsletterForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      setStatus('Sending...', null);
-
-      fetch(newsletterForm.action, {
-        method: newsletterForm.method || 'POST',
-        body: new FormData(newsletterForm),
-        headers: {
-          'Accept': 'application/json'
+      const setStatus = (message, type) => {
+        if (!statusEl) return;
+        statusEl.textContent = message;
+        statusEl.classList.remove('success', 'error');
+        if (type) {
+          statusEl.classList.add(type);
         }
-      }).then((response) => {
-        if (response.ok) {
-          setStatus('Thanks for signing up. Watch your inbox for Deadwave intel.', 'success');
-          newsletterForm.reset();
-        } else {
+      };
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        setStatus('Sending...', null);
+
+        fetch(form.action, {
+          method: form.method || 'POST',
+          body: new FormData(form),
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(async (response) => {
+          if (response.ok) {
+            setStatus('Thanks for signing up. Watch your inbox for updates.', 'success');
+            form.reset();
+            return;
+          }
+
+          // Try to surface Formspree validation errors
+          try {
+            const data = await response.json();
+            if (data && data.errors && data.errors.length) {
+              setStatus(data.errors.map(e => e.message).join(' '), 'error');
+              return;
+            }
+          } catch (e) {
+            // ignore JSON parse errors
+          }
+
           setStatus('Signup failed. Please try again or email support@firewallgames.dev.', 'error');
-        }
-      }).catch(() => {
-        setStatus('Network error. Please check your connection and try again.', 'error');
+        }).catch(() => {
+          setStatus('Network error. Please check your connection and try again.', 'error');
+        });
       });
     });
   }
