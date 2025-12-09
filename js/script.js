@@ -108,4 +108,42 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearTarget) {
     yearTarget.textContent = String(new Date().getFullYear());
   }
+
+  // Newsletter form (Formspree) AJAX handling
+  const newsletterForm = document.querySelector('.newsletter-form');
+  if (newsletterForm) {
+    const statusEl = newsletterForm.querySelector('.form-status');
+
+    const setStatus = (message, type) => {
+      if (!statusEl) return;
+      statusEl.textContent = message;
+      statusEl.classList.remove('success', 'error');
+      if (type) {
+        statusEl.classList.add(type);
+      }
+    };
+
+    newsletterForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      setStatus('Sending...', null);
+
+      fetch(newsletterForm.action, {
+        method: newsletterForm.method || 'POST',
+        body: new FormData(newsletterForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then((response) => {
+        if (response.ok) {
+          setStatus('Thanks for signing up. Watch your inbox for Deadwave intel.', 'success');
+          newsletterForm.reset();
+        } else {
+          setStatus('Signup failed. Please try again or email support@firewallgames.dev.', 'error');
+        }
+      }).catch(() => {
+        setStatus('Network error. Please check your connection and try again.', 'error');
+      });
+    });
+  }
 });

@@ -278,6 +278,82 @@ main{padding-top:80px}
 .contact-list a{color:var(--accent-cyan)}
 .contact-list a:hover{color:var(--accent-magenta)}
 
+.newsletter-form{
+  padding:1.75rem 1.75rem 1.25rem;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:var(--surface);
+  box-shadow:0 12px 30px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction:column;
+  gap:0.75rem;
+}
+
+.newsletter-form label{
+  font-size:0.8rem;
+  text-transform:uppercase;
+  letter-spacing:0.25em;
+  color:var(--text-muted);
+}
+
+.newsletter-form .input-row{
+  display:flex;
+  gap:0.75rem;
+  margin-top:0.25rem;
+}
+
+.newsletter-form input[type="email"]{
+  flex:1;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:var(--surface-light);
+  padding:0.8rem 1.1rem;
+  color:var(--text-primary);
+  font-family:var(--font-body);
+  outline:none;
+  transition:border-color 0.25s ease,box-shadow 0.25s ease,background 0.25s ease;
+}
+
+.newsletter-form input[type="email"]::placeholder{
+  color:var(--text-muted);
+}
+
+.newsletter-form input[type="email"]:focus{
+  border-color:var(--accent-magenta);
+  box-shadow:0 0 0 1px rgba(255,79,225,0.5);
+  background:var(--surface);
+}
+
+.privacy-note{
+  margin-top:0.75rem;
+  color:var(--text-muted);
+  max-width:460px;
+  font-size:0.75rem;
+  line-height:1.6;
+}
+
+.privacy-note a{
+  color:var(--accent-cyan) !important;
+  text-decoration:underline;
+  font-weight:500 !important;
+}
+
+.form-status{
+  margin-top:0.25rem;
+  font-size:0.75rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+}
+
+.form-status.success{
+  color:var(--accent-cyan);
+}
+
+.form-status.error{
+  color:var(--accent-magenta);
+}
+
 .site-footer{padding:2rem 0;border-top:1px solid var(--border);background:#010312}
 .footer-inner{display:flex;flex-direction:column;gap:0.5rem;text-align:center;color:var(--text-muted);font-size:0.85rem}
 
@@ -323,6 +399,14 @@ main{padding-top:80px}
   .hero-main-right{text-align:center}
   .hero-logo-main{
     width:clamp(180px,65vw,260px);
+  }
+
+  .newsletter-form .input-row{
+    flex-direction:column;
+  }
+
+  .newsletter-form button{
+    width:100%;
   }
 }
 
