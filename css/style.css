@@ -40,9 +40,9 @@ body{
 }
 
 .detail-page main{padding-top:90px}
-.hero-align-left{text-align:left}
-.hero-align-left .tagline{margin-left:0}
-.hero-align-left .cta-group{justify-content:flex-start}
+.hero-align-left{text-align:center}
+.hero-align-left .tagline{margin:0 auto 2rem}
+.hero-align-left .cta-group{justify-content:center}
 .hero.hero-deadwave .hero-background{
   background-image:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url('../images/HighresScreenshot00015.png');
   background-size:cover;
@@ -176,7 +176,7 @@ main{padding-top:80px}
 .eyebrow{text-transform:uppercase;letter-spacing:0.4em;font-size:0.75rem;color:var(--text-muted);margin-bottom:1rem}
 .section-heading h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:0.1em;text-transform:uppercase}
 
-.detail-metadata{display:flex;flex-wrap:wrap;gap:0.7rem;margin:1.5rem 0 0}
+.detail-metadata{display:flex;flex-wrap:wrap;gap:0.7rem;margin:1.5rem 0 1.5rem;justify-content:center}
 .detail-metadata span{border:1px solid var(--border);padding:0.35rem 1rem;border-radius:999px;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--text-muted)}
 
 .detail-list{margin-top:1.25rem;display:grid;gap:0.8rem;color:var(--text-muted)}
@@ -289,40 +289,29 @@ main{padding-top:80px}
   gap:0.75rem;
 }
 
-.newsletter-form label{
-  font-size:0.8rem;
-  text-transform:uppercase;
-  letter-spacing:0.25em;
-  color:var(--text-muted);
-}
-
-.newsletter-form .input-row{
-  display:flex;
-  gap:0.75rem;
-  margin-top:0.25rem;
-}
-
-.newsletter-form input[type="email"]{
-  flex:1;
-  border-radius:999px;
+.fs-field{display:flex;flex-direction:column;gap:0.35rem}
+.fs-label{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.25em;color:var(--text-muted)}
+.fs-input{
+  width:100%;
+  border-radius:12px;
   border:1px solid var(--border);
   background:var(--surface-light);
-  padding:0.8rem 1.1rem;
+  padding:0.85rem 1rem;
   color:var(--text-primary);
   font-family:var(--font-body);
   outline:none;
   transition:border-color 0.25s ease,box-shadow 0.25s ease,background 0.25s ease;
 }
+.fs-input::placeholder{color:var(--text-muted)}
+.fs-input:focus{border-color:var(--accent-magenta);box-shadow:0 0 0 1px rgba(255,79,225,0.5);background:var(--surface)}
 
-.newsletter-form input[type="email"]::placeholder{
-  color:var(--text-muted);
-}
+.fs-checkbox-field{display:grid;grid-template-columns:auto 1fr;gap:0.65rem;align-items:flex-start;border:1px solid var(--border);border-radius:12px;padding:0.9rem 1rem;background:var(--surface-light)}
+.fs-checkbox-wrapper{display:flex;align-items:center;justify-content:center}
+.fs-checkbox{width:18px;height:18px;border-radius:4px;border:1px solid var(--border);background:var(--surface);accent-color:var(--accent-magenta);cursor:pointer}
+.fs-description{color:var(--text-muted);font-size:0.85rem;margin-top:0.2rem}
 
-.newsletter-form input[type="email"]:focus{
-  border-color:var(--accent-magenta);
-  box-shadow:0 0 0 1px rgba(255,79,225,0.5);
-  background:var(--surface);
-}
+.fs-button-group{display:flex;justify-content:flex-start;margin-top:0.5rem}
+.fs-button{border:none;}
 
 .privacy-note{
   margin-top:0.75rem;

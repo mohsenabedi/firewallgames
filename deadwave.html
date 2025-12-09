@@ -297,19 +297,74 @@
         <div data-reveal>
           <form
             action="https://formspree.io/f/xldqwogk"
+            class="newsletter-form fs-form"
+            target="_top"
             method="POST"
-            class="newsletter-form"
           >
-            <label for="newsletter-email">Email address</label>
-            <div class="input-row">
+            <div class="fs-field">
+              <label class="fs-label" for="full-name">Full Name</label>
               <input
-                id="newsletter-email"
-                type="email"
+                class="fs-input"
+                id="full-name"
+                name="full-name"
+                placeholder="Enter your name (optional)"
+              />
+            </div>
+            <div class="fs-field">
+              <label class="fs-label" for="email">Email Address</label>
+              <input
+                class="fs-input"
+                id="email"
                 name="email"
-                placeholder="you@example.com"
+                type="email"
+                placeholder="Enter your email address"
                 required
-              >
-              <button type="submit" class="btn primary">Sign up for newsletter</button>
+              />
+            </div>
+            <div class="fs-checkbox-field">
+              <div class="fs-checkbox-wrapper">
+                <input
+                  aria-describedby="newsletter-consent-description"
+                  class="fs-checkbox"
+                  id="newsletter-consent"
+                  name="newsletter-consent"
+                  required
+                  type="checkbox"
+                  value="yes"
+                />
+              </div>
+              <div>
+                <label class="fs-label" for="newsletter-consent">
+                  Consent to Receive Newsletters
+                </label>
+                <p class="fs-description" id="newsletter-consent-description">
+                  I agree to receive newsletters from Firewall Games.
+                </p>
+              </div>
+            </div>
+            <div class="fs-checkbox-field">
+              <div class="fs-checkbox-wrapper">
+                <input
+                  aria-describedby="privacy-policy-agreement-description"
+                  class="fs-checkbox"
+                  id="privacy-policy-agreement"
+                  name="privacy-policy-agreement"
+                  required
+                  type="checkbox"
+                  value="yes"
+                />
+              </div>
+              <div>
+                <label class="fs-label" for="privacy-policy-agreement">
+                  I Agree to the Privacy Policy
+                </label>
+                <p class="fs-description" id="privacy-policy-agreement-description">
+                  I have read and agree to the Privacy Policy.
+                </p>
+              </div>
+            </div>
+            <div class="fs-button-group">
+              <button class="fs-button btn primary" type="submit">Subscribe</button>
             </div>
             <p class="privacy-note">
               <small>
@@ -366,7 +421,6 @@
       <p class="footer-note">Built with static HTML/CSS/JS for GitHub Pages.</p>
     </div>
   </footer>
-
   <script src="js/script.js" defer></script>
 </body>
 </html>
