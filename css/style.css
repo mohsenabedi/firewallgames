@@ -229,6 +229,10 @@ main{padding-top:80px}
 .detail-cta .contact-list a{color:var(--accent-magenta)}
 .detail-cta .contact-list a:hover{color:var(--accent-cyan)}
 
+.newsletter-index.detail-cta{
+  background:linear-gradient(160deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));
+}
+
 .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem;align-items:center}
 .about-copy ul{margin-top:1.5rem;display:grid;gap:0.7rem}
 .about-copy li{position:relative;padding-left:1.5rem;color:var(--text-muted)}
